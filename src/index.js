@@ -8,16 +8,16 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {HashRouter, Route} from 'react-router-dom';
 import './css/index.css';
 import App from './components/App';
 import Footer from './components/Footer';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter basename="/flickrGallery">
     <Route path="/" 
         render={ (props) => <App {...props} />} />
     {/* Footer is rendered here so it appears outside the container div - so there will be sticky footer for 404 and loading pages */}
     <Route component={Footer} />
-  </BrowserRouter>, document.getElementById('root')
+  </HashRouter>, document.getElementById('root')
 );
