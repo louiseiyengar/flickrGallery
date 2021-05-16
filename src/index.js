@@ -14,7 +14,7 @@ import App from './components/App';
 import Footer from './components/Footer';
 
 ReactDOM.render(
-  <HashRouter basename="/flickrGallery">
+  <HashRouter>
     <Route path="/" 
         render={ (props) => <App {...props} />} />
     {/* Footer is rendered here so it appears outside the container div - so there will be sticky footer for 404 and loading pages */}
